@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <header class="bg-black py-4 px-4 w-[100%]">
+      <h1 class="text-white text-3xl font-bold text-center font-mono">
+        Encriptador
+      </h1>
+    </header>
+    <main>
+      <!-- INFO -->
+      <section class="py-4 px-4 w-[100%] font-mono">
+        <p class="text-center">
+          Este proyecto corresponde al primer Challenge del Programa ONE de
+          <a
+            class="text-blue-600 font-semibold"
+            href="https://www.oracle.com/co/education/oracle-next-education/"
+            >Oracle Next Education</a
+          >
+          y
+          <a
+            class="text-blue-600 font-semibold"
+            href="https://www.aluracursos.com/"
+            >Alura Latam</a
+          >
+        </p>
+      </section>
+      <!-- TEXTO A ENCRIPTAR -->
+      <section>
+        <!-- LABEL E INPUT -->
+        <div class="p-4">
+          <label for="texto1" class="block mb-4 text-center font-bold"
+            >Ingresa el texto a encriptar o desencriptar:</label
+          >
+          <textarea
+            class="block border-solid border-black border-2 rounded-md w-[60%] mx-auto h-60 p-2"
+            type="text"
+            id="texto1"
+            placeholder="Escribe lo que quieras..."
+          ></textarea>
+        </div>
+        <!-- BOTONES -->
+        <div class="w-[80%] mx-auto flex justify-center gap-1">
+          <button
+            id="encriptar"
+            type="button"
+            class="font-mono border-solid border-black border-2 rounded-md p-2 bg-blue-500 text-white font-semibold hover:bg-blue-800"
+          >
+            encriptar
+          </button>
+          <button
+            id="desencriptar"
+            type="button"
+            class="font-mono border-solid border-black border-2 rounded-md p-2 bg-blue-500 text-white font-semibold hover:bg-blue-800"
+            disabled
+          >
+            desencriptar
+          </button>
+        </div>
+      </section>
+      <!-- TEXTO  DESENCRIPTADO -->
+      <section>
+        <!-- LABEL E INPUT -->
+        <div class="p-4">
+          <label for="texto2" class="block mb-4 text-center font-bold"
+            >Texto procesado</label
+          >
+          <textarea
+            class="block border-solid border-black border-2 rounded-md w-[60%] mx-auto h-60 p-2"
+            disabled
+            type="text"
+            id="texto2"
+            placeholder=" "
+          ></textarea>
+        </div>
+        <!-- BOTONES -->
+        <div class="w-[80%] mx-auto mb-8 flex justify-center gap-1">
+          <button
+            id="copiar"
+            type="button"
+            class="font-mono border-solid border-black border-2 rounded-md p-2 bg-green-500 text-white font-semibold hover:bg-green-800"
+            disabled
+          >
+            copiar
+          </button>
+          <button
+            id="reiniciar"
+            type="button"
+            class="font-mono border-solid border-black border-2 rounded-md p-2 bg-red-500 text-white font-semibold hover:bg-red-800"
+            disabled
+          >
+            reiniciar
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black flex flex-col justify-center items-center py-2">
+      <p class="text-white">Developed by Paulo de los Reyes</p>
+      <a
+        class="text-white font-bold underline"
+        href="https://paulowebdev.netlify.app/"
+        >paulo.dev</a
+      >
+    </footer>
+  </body>
+  <script>
+	const texto1 = document.getElementById("texto1")
+const encriptar = document.getElementById("encriptar")
+const desencriptar = document.getElementById("desencriptar")
+const texto2 = document.getElementById("texto2")
+const copiar = document.getElementById("copiar")
+const reiniciar = document.getElementById("reiniciar")
+
+
+texto1.addEventListener("input", (e) => {
+    const texto = e.target.value;
+    const textoMinusculas = texto.toLowerCase();
+    texto1.value = textoMinusculas.replace(/[^a-zA-Z0-9 ]/g, "")
+});
+
+
+
+encriptar.addEventListener("click", () => {
+    let texto = texto1.value.toLowerCase()
+    let matrizDeEncriptacion = [
+        ["e", "enter"],
+        ["i", "imes"],
+        ["a", "ai"],
+        ["o", "ober"],
+        ["u", "ufat"],
+    ];
+    for (let i = 0; i < matrizDeEncriptacion.length; i++) {
+        if (texto.includes(matrizDeEncriptacion[i][0])) {
+            texto = texto.replaceAll(matrizDeEncriptacion[i][0], matrizDeEncriptacion[i][1]);
+        }
+    }
+    texto2.disabled = false
+    texto2.textContent = texto
+    desencriptar.disabled = false
+    copiar.disabled = false
+    reiniciar.disabled = false
+});
+
+
+reiniciar.addEventListener("click", () => {
+    location.reload()
+})
+
+copiar.addEventListener("click", () => {
+    texto2.select()
+    document.execCommand("copy")
+    alert("Copiado al portapapeles")
+})
+
+desencriptar.addEventListener("click", () => {
+
+    let texto = texto1.value.toLowerCase()
+    let matrizDeEncriptacion = [
+        ["u", "ufat"],
+        ["o", "ober"],
+        ["a", "ai"],
+        ["i", "imes"],
+        ["e", "enter"],
+    ];
+    for (let i = 0; i < matrizDeEncriptacion.length; i++) {
+        if (texto.includes(matrizDeEncriptacion[i][1])) {
+            texto = texto.replaceAll(matrizDeEncriptacion[i][1], matrizDeEncriptacion[i][0]);
+        }
+    }
+    texto2.textContent = texto
+})
+  </script>
+</html>

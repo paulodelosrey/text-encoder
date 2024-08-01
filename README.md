@@ -38,7 +38,7 @@ Dentro del proyecto encontrarás una estructura de carpetas y archivos típica d
 │ └── pages/
 │ └── index.astro # Página principal
 └── package.json # Archivo de configuración de npm
-
+```text
 
 ## 🛠️ Comandos Disponibles
 

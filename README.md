@@ -25,8 +25,7 @@ Puedes interactuar con la aplicación en vivo en el siguiente enlace: [Text Enco
 ## 📂 Estructura del Proyecto
 
 Dentro del proyecto encontrarás una estructura de carpetas y archivos típica de Astro y similar a la siguiente:
-text
-/
+
 ├── public/
 │   └── favicon.svg  # Icono del sitio
 ├── src/
@@ -50,30 +49,3 @@ Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 | `npm run preview`         | Previsualiza tu compilación localmente antes de desplegar |
 | `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check` |
 | `npm run astro -- --help` | Obtén ayuda usando la CLI de Astro               |
-
-## 🧪 Código Principal
-
-Aquí tienes una muestra del código principal del proyecto:
-
-html
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link href="output.css" rel="stylesheet" /> <title>Encriptador de texto</title> </head> <body> <header class="bg-black py-4 px-4 w-[100%]"> <h1 class="text-white text-3xl font-bold text-center font-mono"> Encriptador </h1> </header> <main> <section class="py-4 px-4 w-[100%] font-mono"> <p class="text-center"> Este proyecto corresponde al primer Challenge del Programa ONE de <a class="text-blue-600 font-semibold" href="https://www.oracle.com/co/education/oracle-next-education/" >Oracle Next Education</a > y <a class="text-blue-600 font-semibold" href="https://www.aluracursos.com/" >Alura Latam</a > </p> </section>
-</main>
-<footer class="bg-black flex flex-col justify-center items-center py-2">
-  <p class="text-white">Developed by Paulo de los Reyes</p>
-  <a
-    class="text-white font-bold underline"
-    href="https://paulowebdev.netlify.app/"
-    >paulo.dev</a
-  >
-</footer>
-</body> <script> // Ejemplo de código JavaScript para encriptar texto function encriptar(texto) { const reglas = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' }; return texto.replace(/[aeiou]/g, letra => reglas[letra]); } console.log(encriptar("hola")); // h4l1 </script> </html>
-
-## 📚 Quieres Aprender Más?
-
-Siente la libertad de revisar [nuestra documentación](https://docs.astro.build) o unirte a nuestro [servidor de Discord](https://astro.build/chat).
-
-### Recursos Adicionales
-- [Documentación de JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
-- [Guía de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [Tutorial de Astro](https://docs.astro.build/es/getting-started/)

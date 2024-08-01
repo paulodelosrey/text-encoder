@@ -4,7 +4,7 @@ Este proyecto es un encriptador de texto desarrollado como parte del Programa Ed
 
 ## 🔧 Descripción
 
-Este proyecto es parte del primer Challenge del Programa ONE de [Oracle Next Education](https://www.oracle.com/co/education/oracle-next-education/) y [Alura Latam](https://www.aluracursos.com/). Es una aplicación web simple que permite encriptar y desencriptar texto utilizando un conjunto de reglas de encriptación específicas.
+Text Encoder Project constituye el primero de cuatro Challenges del Programa ONE de [Oracle Next Education](https://www.oracle.com/co/education/oracle-next-education/) y [Alura Latam](https://www.aluracursos.com/). Es una aplicación web simple que permite encriptar y desencriptar texto utilizando un conjunto de reglas de encriptación específicas.
 
 ## 🛠️ Tecnologías Utilizadas
 

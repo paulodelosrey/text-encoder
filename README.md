@@ -26,6 +26,8 @@ Puedes interactuar con la aplicación en vivo en el siguiente enlace: [Text Enco
 
 Dentro del proyecto encontrarás una estructura de carpetas y archivos típica de Astro y similar a la siguiente:
 
+```text
+/
 ├── public/
 │   └── favicon.svg  # Icono del sitio
 ├── src/
@@ -34,8 +36,7 @@ Dentro del proyecto encontrarás una estructura de carpetas y archivos típica d
 │   ├── layouts/
 │   │   └── Layout.astro  # Diseño principal
 │   └── pages/
-│       └── index.astro  # Página principal
-└── package.json  # Archivo de configuración de npm
+│       └
 
 ## 🛠️ Comandos Disponibles
 

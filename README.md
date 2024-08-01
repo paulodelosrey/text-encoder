@@ -1,6 +1,6 @@
 # Text Encoder Project
 
-Este proyecto es un encriptador de texto desarrollado como parte del programa educativo de 6 meses de Oracle Next Education.
+Este proyecto es un encriptador de texto desarrollado como parte del Programa Educativo de 6 meses de Oracle Next Education.
 
 ## 🔧 Descripción
 

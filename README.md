@@ -29,14 +29,16 @@ Dentro del proyecto encontrarás una estructura de carpetas y archivos típica d
 ```text
 /
 ├── public/
-│   └── favicon.svg  # Icono del sitio
+│ └── favicon.svg # Icono del sitio
 ├── src/
-│   ├── components/
-│   │   └── Card.astro  # Componente de tarjeta
-│   ├── layouts/
-│   │   └── Layout.astro  # Diseño principal
-│   └── pages/
-│       └
+│ ├── components/
+│ │ └── Card.astro # Componente de tarjeta
+│ ├── layouts/
+│ │ └── Layout.astro # Diseño principal
+│ └── pages/
+│ └── index.astro # Página principal
+└── package.json # Archivo de configuración de npm
+
 
 ## 🛠️ Comandos Disponibles
 
